@@ -18,14 +18,17 @@ header{
 }
 
 section{
-    margin-bottom: 40px;
     width: 90%;
-    margin: auto;
+    margin: 0 auto 40px;
 }
 
 footer{
     width: 90%;
     margin: auto;
+}
+
+button{
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -56,6 +59,7 @@ footer{
     font-size: 48px;
     line-height: 72px;
     text-transform: capitalize;
+    margin: 0;
 }
 
 .titleParagraph{
@@ -63,6 +67,7 @@ footer{
     font-size: 16px;
     line-height: 24px;
     color: rgba(11, 27, 54, 0.6);
+    margin: 0;
 }
 
 /* Header */
@@ -196,6 +201,11 @@ footer{
     margin: 0 0 6px 0;
 }
 
+.header-main > #connected > #ping{
+    display: flex;
+    align-items: center;
+}
+
 .header-main > .titleParagraph{
     width: 50%;
     margin: 24px 0 40px;
@@ -215,4 +225,461 @@ footer{
     gap: 16px;
     color: #01A3C2;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-main > .button-box > button:last-child:hover{
+    transform: scale(1.15);
+}
+
+.header-main > .button-box > button:last-child:hover > span{
+    border-bottom: 1px solid;
+}
+
+/* ---------- Main ---------- */
+/* Section Connect */
+
+.section-connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 635px;
+}
+
+.section-connect > .title{
+    width: 50%;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.section-connect > .connect-circle{
+    max-width: 506px;
+    width: 100%;
+    max-height: 507px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.section-connect > .connect-circle > .circle{
+    width: 444px;
+    height: 444px;
+    background:  #C2F1F5;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.section-connect > .connect-circle > .circle > img{
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+}
+
+.section-connect > .connect-circle > .connected-small{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    max-width: 126px;
+    max-height: 156px;
+    position: absolute;
+    padding: 16px 8px;
+    background-color: #FFF;
+    box-shadow: 0px 10px 94px rgba(204, 204, 204, 0.25);
+    border-radius: 10px;
+}
+
+.section-connect > .connect-circle > .connected-small:nth-child(2){
+    top: 0;
+    right: 0;
+    gap: 16px;
+}
+
+.section-connect > .connect-circle > .connected-small:last-child{
+    bottom: 0;
+    left: 0;
+    gap: 8px;
+}
+
+.section-connect > .connect-circle > .connected-small > img{
+    max-width: 32px;
+}
+
+.section-connect > .connect-circle > .connected-small:nth-child(2) > img{
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+
+.section-connect > .connect-circle > .connected-small > span{
+    font-size: 12px;
+    line-height: 18px;
+    color: #0B1B36;
+}
+
+.section-connect > .connect-circle > .connected-small > p{
+    font-size: 8px;
+    line-height: 12px;
+    color: rgba(11, 27, 54, 0.6);
+}
+
+.section-connect > .connect-circle > .connected-small > button{
+    font-size: 10px;
+    line-height: 14px;
+    padding: 8px 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.section-connect > .connect-circle > .connected-small > button:hover{
+    transform: scale(1.15);
+}
+
+.section-connect > .titleParagraph{
+    width: 50%;
+    align-self: flex-end;
+    margin: 24px 0 32px;
+}
+
+.section-connect > button{
+    width: fit-content;
+    align-self: center;
+    margin-left: 12%;
+    height: 60px;
+}
+
+/* Section Pay */
+
+.section-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    min-height: 924px;
+}
+
+.section-pay > .pay-options{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-pay > .pay-options > .pay-option{
+    box-shadow: 0px 10px 94px rgba(204, 204, 204, 0.25);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 475px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-pay > .pay-options > .pay-option > h2{
+    margin: 0;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: #0B1B36;
+}
+
+.section-pay > .pay-options > .pay-option > p{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #01a3c2;
+    margin: 0;
+}
+
+.section-pay > .pay-options > .pay-option > p > span{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.section-pay > .pay-options > .pay-option > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+}
+
+.section-pay > .pay-options > .pay-option > ul > li{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-pay > .pay-options > .pay-option > button{
+    margin-top: 24px;
+}
+
+.section-pay > .pay-options > .pay-option > .pay-mask{
+    position: absolute;
+    z-index: -1;
+}
+
+.section-pay > .pay-options > .pay-option:first-child > .pay-mask{
+    bottom: -5%;
+    right: -10%;
+}
+
+.section-pay > .pay-options > .pay-option:nth-child(2) > .pay-mask{
+    top: -10%;
+    left: 0;
+}
+
+.section-pay > .pay-options > .pay-option:last-child > .pay-mask{
+    transform: rotate(180deg);
+    right: 0;
+    top: -10%;
+}
+
+/* Section Feedback */
+
+.section-feedback{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 56px;
+    min-height: 549px;
+    background: #FBFEFE;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.section-feedback > .title-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-feedback > .feedback-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.section-feedback > .feedback-wrapper > .feedback{
+    background-color: #FFF;
+    max-height: 200px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > .feedback-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > .feedback-title > .title-smallBox{
+    margin: 0 50px 0 16px;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > .feedback-title > .title-smallBox > .title.small{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > .feedback-title > .title-smallBox > .titleParagraph.small{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > .feedback-title > .review{
+    font-size: 14px;
+    line-height: 21px;
+    color: #01A3C2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-feedback > .feedback-wrapper > .feedback > p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #999;
+}
+
+/* Section Instal */
+
+.section-install{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #01A3C2;;
+    background-position: left;
+    border-radius: 40px;   
+    padding: 80px 120px;
+    box-sizing: border-box;
+    height: 452px;
+    position: relative;
+}
+
+.section-install > .install-wrapper{
+    width: 50%;
+    align-self: flex-start;
+}
+
+.section-install > .install-wrapper > h2{
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.section-install > .install-wrapper > p{
+    color: white;
+    opacity: 0.6;
+    margin: 16px 0 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.section-install > .install-wrapper > button{
+    background-color: white;
+    color: #01A3C2;
+}
+
+.section-install > .install-img{
+    width: 50%;
+}
+
+.section-install > .install-img > img{
+    position: absolute;
+    top: 0;
+    right: 25%;
+}
+
+.section-install > .install-img > .install-moon{
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.section-install > .install-img > .install-moon:nth-child(2){
+    width: 17px;
+    height: 17px;
+    top: 10%;
+    right: 15%;
+    z-index: 1;
+}
+
+.section-install > .install-img > .install-moon:nth-child(3){
+    width: 17px;
+    height: 17px;
+    top: 45%;
+    right: 5%;
+    z-index: 1;
+}
+
+.section-install > .install-img > .install-moon:nth-child(4){  
+    width: 32px;
+    height: 32px;
+    bottom: 15%;
+    left: 50%;
+    z-index: 1;
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    min-height: 315px;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 240px;
+    max-height: 185px;
+}
+
+.footer-info > p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(11, 27, 54, 0.6);
+    margin: 0;
+}
+
+.footer-info > .share{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-info > .share > li > a{
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-info > .share > li > a:hover{
+    transform: scale(1.15);
+}
+
+.footer-nav{
+    display: flex;
+    gap: 170px;
+}
+
+.footer-nav > .footer-navItem{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.footer-nav > .footer-navItem > h2{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #01A3C2;
+    margin: 0;
+}
+
+.footer-nav > .footer-navItem > ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.footer-nav > .footer-navItem > ul > li > a{
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(11, 27, 54, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-nav > .footer-navItem > ul > li > a:hover{
+    transform: scale(1.15);
+    border-bottom: solid 1px;
+}
+
+/* logo & Animation */
+
+.logo{
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.15);
 }
