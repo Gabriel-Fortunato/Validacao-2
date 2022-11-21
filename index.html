@@ -17,33 +17,39 @@
             <a href="#">
                 <img src="./assets/imgs/svg/full-logo.svg" alt="" class="logo">
             </a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Coaches</a>
-                    </li>
-                    <li>
-                        <a href="#">Lessons</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="account-box">
-                <a href="#" id="sign-in">
-                    Sign In
-                </a>
-                <a href="" class="full-button">
-                    Contact Us
-                </a>
+            <input type="checkbox" name="mobileMenu" id="mobileMenu">
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Coaches</a>
+                        </li>
+                        <li>
+                            <a href="#">Lessons</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="account-box">
+                    <a href="#" id="sign-in">
+                        Sign In
+                    </a>
+                    <a href="" class="full-button">
+                        Contact Us
+                    </a>
+                </div>
             </div>
+            <label for="mobileMenu" id="menuLabel">
+                <img src="./assets/imgs/svg/menu.svg" alt="">
+            </label>
         </div>
         <div class="header-main">
             <h1 class="title">fast Secure access vPN always want to be easy use</h1>
@@ -102,8 +108,11 @@
                 <h2 class="title">price that suits you best</h2>
                 <p class="titleParagraph">These are several packages to get started with your VPN at various prices</p>
             </div>
+            <input type="radio" name="Pay Plan" id="pp1">
+            <input type="radio" name="Pay Plan" id="pp2">
+            <input type="radio" name="Pay Plan" id="pp3">
             <section class="pay-options">
-                <article class="pay-option">
+                <article class="pay-option" id="po1">
                     <h2>Regular</h2>
                     <p>$25,00<span>/month</span></p>
                     <ul>
@@ -117,7 +126,7 @@
                     <button class="full-button">Get Started</button>
                     <img src="./assets/imgs/svg/pay-mask1.svg" alt="" class="pay-mask">
                 </article>
-                <article class="pay-option">
+                <article class="pay-option" id="po2">
                     <h2>Enterprise</h2>
                     <p>$32.45<span>/month</span></p>
                     <ul>
@@ -131,7 +140,7 @@
                     <button class="full-button">Get Started</button>
                     <img src="./assets/imgs/svg/pay-mask1.svg" alt="" class="pay-mask">
                 </article>
-                <article class="pay-option">
+                <article class="pay-option" id="po3">
                     <h2>Sultans</h2>
                     <p>$65,93<span>/month</span></p>
                     <ul>
@@ -145,7 +154,12 @@
                     <button class="full-button">Get Started</button>
                     <img src="./assets/imgs/svg/pay-mask1.svg" alt="" class="pay-mask">
                 </article>
-            </section>
+            </section> 
+            <div class="label-wrapper">
+                <label for="pp1"></label>
+                <label for="pp2"></label>
+                <label for="pp3"></label>
+            </div>
         </section>
         <section class="section-feedback">
             <div class="title-box">

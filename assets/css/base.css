@@ -20,6 +20,7 @@ header{
 section{
     width: 90%;
     margin: 0 auto 40px;
+    max-width: 1200px;
 }
 
 footer{
@@ -44,11 +45,11 @@ button{
     box-sizing: border-box;
     border-radius: 24px;
     transition: all 0.2s ease-in-out;
+    display: block;
 }
 
 .full-button:hover{
-    font-size: 20px;
-    line-height: 24px;
+    transform: scale(1.15);
 }
 
 /* Titles */
@@ -76,25 +77,32 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
-    margin-top: 52px;
+    margin: 52px auto 40px;
     min-height:33px;
     max-height: 50px;
     height: 100%;
+    max-width: 1200px;
+    position: relative;
 }
 
 .header-nav + a{
     margin-right: 72px;
 }
 
-.header-nav > nav > ul{
+.header-nav > .nav-wrapper{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.header-nav > .nav-wrapper > nav > ul{
     display: flex;
     gap: 40px;
     align-items: center;
     list-style: none;
 }
 
-.header-nav > nav > ul > li > a{
+.header-nav > .nav-wrapper > nav > ul > li > a{
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
@@ -103,23 +111,23 @@ button{
     transition: all 0.2s ease-in-out;
 } 
 
-.header-nav > nav > ul > li > a:hover, .header-nav > .account-box > #sign-in:hover{
+.header-nav > .nav-wrapper > nav > ul > li > a:hover, .header-nav > .nav-wrapper > .account-box > #sign-in:hover{
     font-size: 20px;
     line-height: 24px;
     border-bottom: 1px solid;
 }
 
-.header-nav > .account-box{
+.header-nav > .nav-wrapper > .account-box{
     display: flex;
     gap: 40px;
     align-items: center;
 }
 
-.header-nav > .account-box a{
+.header-nav > .nav-wrapper > .account-box a{
     text-decoration: none;
 }
 
-.header-nav > .account-box > #sign-in{
+.header-nav > .nav-wrapper > .account-box > #sign-in{
     font-size: 16px;
     line-height: 20px;
     color: #01A3C2;
@@ -129,6 +137,8 @@ button{
 .header-main{
     position: relative;
     min-height: 514px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .header-main > .title{
@@ -149,6 +159,8 @@ button{
     position: absolute;
     top: 0;
     right: 0;
+    width: 100%;
+    max-width: 518px;
 }
 
 .header-main > #moon > .moon-circle{
@@ -377,6 +389,7 @@ button{
     max-height: 475px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .section-pay > .pay-options > .pay-option > h2{
@@ -405,6 +418,7 @@ button{
     flex-direction: column;
     gap: 24px;
     padding: 0;
+    margin: 0;
 }
 
 .section-pay > .pay-options > .pay-option > ul > li{
@@ -447,7 +461,7 @@ button{
     gap: 56px;
     min-height: 549px;
     background: #FBFEFE;
-    padding: 80px 0;
+    padding-bottom: 80px;
     box-sizing: border-box;
 }
 
@@ -683,3 +697,266 @@ footer{
 .logo:hover{
     transform: scale(1.15);
 }
+
+/* ---------- Responsivity ---------- */
+
+@media (max-width:1140px){
+    section{
+        padding: 40px 0;
+    }
+
+    .header-nav > .nav-wrapper{
+        width: 100%;
+    }
+
+    .title, .titleParagraph{
+        text-align: center;
+    }
+
+    .header-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .header-main > .title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .header-main > #moon{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .header-main > #connected{
+        top: 65%;
+        right: auto;
+    }
+
+    .header-main > .titleParagraph{
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .section-connect > .title{
+        width: 100%;
+        align-self:auto ;
+        margin: 0;
+    }
+
+    .section-connect > .connect-circle {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        margin: 40px auto;
+    }
+
+    .section-connect > .connect-circle > .circle{
+        position: relative;
+        margin: auto;
+    }
+
+    .section-connect > .connect-circle > .circle > img{
+        position: absolute;
+        bottom: -10%;
+        right: 0;
+    }
+
+    .section-connect > .titleParagraph {
+        width: auto;
+        align-self: center;
+        margin: 40px 0 32px;
+    }
+
+    .section-connect > button{
+        align-self: center;
+        margin-left: 0;
+    }
+
+    .section-pay{
+        min-height: auto;
+    }
+
+    .section-pay > .pay-options{
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-pay > .pay-options > .pay-option{
+        max-height: fit-content;
+        padding:20px
+    }
+
+    .section-install{
+        padding: 40px 80px;
+    }
+}
+
+@media (max-width:1020px){
+    .header-nav > .nav-wrapper > nav > ul{
+        gap: 20px;
+    }
+
+    .header-nav > .nav-wrapper > .account-box{
+        gap: 20px;
+    }
+}
+
+@media (max-width:1020px){
+    .header-nav > .nav-wrapper > nav > ul{
+        padding-left: 5px;
+    }
+
+    .section-feedback > .feedback-wrapper{
+        gap: 24px;
+    }
+
+    .footer-nav{
+        gap: 100px;
+    }
+}
+
+/* ------ Mobile ----- */
+
+.header-nav > #mobileMenu{
+    display: none;
+}
+
+.header-nav > #menuLabel{
+    display: none;
+}
+
+.header-nav > #menuLabel{
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-nav > #menuLabel:hover{
+    transform: scale(1.15);
+}
+
+.header-nav > #mobileMenu:checked ~ #menuLabel{
+    border: 1px solid #01A3C2;
+    border-radius: 5px;
+}
+
+.section-pay input{
+    display: none;
+}
+
+.section-pay .label-wrapper{
+    height: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.section-pay .label-wrapper label{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+    transition: all 0.2s ease-in-out;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width:860px){
+    .header-nav > .nav-wrapper{
+        display: none;
+    }
+    
+    .header-nav > #menuLabel{
+        display: block;
+    }
+
+    .header-nav > #mobileMenu:checked ~ .nav-wrapper{
+        display: flex;
+        position: absolute;
+        top: 150%;
+        z-index: 1;
+        background-color: #c2f1f5;
+        padding: 10px 20px;
+        border-radius: 10px;
+        max-height: 72px;
+        box-sizing: border-box;
+    }
+
+    .section-pay .label-wrapper label{
+        display: block;
+    }
+
+    .section-pay #pp1:checked ~ .label-wrapper label[for="pp1"], .section-pay #pp2:checked ~ .label-wrapper label[for="pp2"], .section-pay #pp3:checked ~ .label-wrapper label[for="pp3"]{
+        background-color: #01A3C2;
+    }
+
+    /* Selection of pay options */
+
+    #po2, #po3{
+        display: none;
+    }
+
+    .section-pay #pp1:checked ~ .pay-options > #po1{
+        display: flex;
+    }
+
+    .section-pay #pp1:checked ~ .pay-options > #po2, .section-pay #pp1:checked ~ .pay-options > #po3 {
+        display: none;
+    }
+
+    .section-pay #pp2:checked ~ .pay-options > #po1, .section-pay #pp2:checked ~ #po3{
+        display: none;
+    }
+
+    .section-pay #pp2:checked ~ .pay-options > #po2{
+        display: flex;
+    }
+
+    .section-pay #pp3:checked ~ .pay-options > #po1, .section-pay #pp3:checked ~ #po2{
+        display: none;
+    }
+
+    .section-pay #pp3:checked ~ .pay-options > #po3{
+        display: flex;
+    }
+
+    .pay-option{
+        max-width: 327px;
+        max-height: 693px;
+    }
+
+    /* Selection of Feedback */
+
+    /*----*/
+
+    .section-install > .install-wrapper{
+        width: 100%;
+        align-self: center;
+        z-index: 1;
+    } 
+
+    .section-install > .install-wrapper > button{
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 48px;
+    }
+}
+
