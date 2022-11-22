@@ -1062,6 +1062,15 @@ footer{
         line-height: 28px;
     }
 
+    .header-nav > .nav-wrapper > nav > ul{
+        padding-left: 0;
+    }
+
+    .header-nav > .nav-wrapper > nav > ul > li > a{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
     .header-main > #moon{
         height: 100%;
         max-height: 514px;
